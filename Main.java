@@ -15,15 +15,11 @@ public class Main
 	    
 	    while(sticks > 0)
 	    {
-	        if(turn)
-	           sticks = playerMove(sticks, reader);
-	        else
-	           sticks = computerMove(sticks);
+	        if(turn) sticks = playerMove(sticks, reader);
+	        else sticks = computerMove(sticks);
 	       System.out.println("There are " + sticks + " sticks left.");
-	        if(sticks == 0 && turn)  //&& means "AND"
-	            System.out.println("Player wins!");
-	        if(sticks == 0 && !turn) //! means false
-	            System.out.println("Computer wins.");
+	        if(sticks == 0 && turn) System.out.println("Player wins!");
+	        if(sticks == 0 && !turn) System.out.println("Computer wins.");
 	        turn = !turn;
 	    }
 	}
